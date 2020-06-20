@@ -5,11 +5,18 @@ body{
 }
 
 .container{
-  background-color: #0373fc;
+  background-color: #4fff72;
   padding: 20px;
   border: 1px solid red;
   margin: auto;
   /*background-image: linear-gradient(to bottom right, #34eb92 , #0373fc);*/
+}
+
+h2 {
+  background-color: darkmagenta;
+  text-align: center;
+  margin-bottom: 13px;
+  font-weight: 900;
 }
 
 button.btn.btn-danger{
@@ -24,7 +31,12 @@ button.btn.btn-primary{
   background-color: red;
   border: 1px solid black;
   margin:5px;
-  background-image: linear-gradient(-60deg, #fc036b , #fc0331);
+  margin-bottom: 11px;
+  background-image: linear-gradient(-60deg, magenta , yellow);
+}
+
+.table-primary{
+  background-color: darkmagenta;
 }
 
 label{
@@ -40,24 +52,4 @@ label{
 i{
   border:1px solid red;
   padding:5px;
-}
-
-.odd-class-highlight{
-  background-color: grey;
-}
-
-.fadingClass{
-  background-image: linear-gradient(to right,red,yellow);
-  margin-top:5px;
-  padding: 10px;
-  border:none;
-  display:flex;
-}
-
-.fadingClass1{
-  background-image: linear-gradient(to left,blue,white);
-  margin-top:5px;
-  padding: 10px;
-  border:none;
-  display:flex;
 }

@@ -24,53 +24,22 @@ function todoEntry(){
     }else{
       $('#todolist').append($newTrNode);
     }
-    $('#checkingfade').fadeOut(7000);
-
+    $('#todoEntry').val('');
   }
 }
-$(function(){
-  $('#showtable').attr('disabled', true);
-  $('#checkingfade').on('click',function(){
-    // $('#checkingfade').fadeOut(1000);
-     //$('#checkingfade').delay(700).fadeIn(700);
-    // $('table').slideUp(7000);
-    // $('table').slideDown(700);
-     $('table').delay(700).fadeOut(1000);
-     $('table').delay(700).fadeIn(700);
-    });
-  // to add event Listener for submit button
-  listButton.addEventListener('click', todoEntry, false)
-/*
-  $(window).scroll(function(){
-    $('.fadingClass').animate({
-      opacity:0.0,
-      marginLeft:'+=480'},1000,function(){
-        $('.fadingClass').fadeOut(1000);
-      });
-      $('.fadingClass1').animate({
-        opacity:0.0,
-        marginLeft:'-=480'},1000,function(){
-          $('.fadingClass1').fadeOut(1000);
-        });
-  });*/
 
-  $('#hidetable').click(function(){
-    $('table').animate({
-      opacity:0.0,
-      marginLeft:'+=100'},1000,function(){
-        $('table').fadeOut(1000);
-      });
-    $('#hidetable').attr("disabled",true);
-    $('#showtable').attr("disabled",false);
-  });
+//deleting selected node using target method
+function deleteNode(e){
+  var value = e.target;
+  var nodetodelete = value.parentNode.parentNode;
+  nodetodelete.remove();
+/*  var parentNode = nodetodelete.parentNode;
+  parentNode.removeChild(nodetodelete);*/
+}
 
-  $('#showtable').click(function(){
-    $('table').animate({
-      opacity:1.0,
-      marginLeft:'-=100'},1000,function(){
-        $('table').fadeIn(1000);
-      });
-    $('#showtable').attr('disabled',true);
-    $('#hidetable').removeAttr('disabled');
-  });
-});
+//adding event Listener to the parent object only, and getting child object as and when require.
+togetClickedEntry.addEventListener('click', function(e){
+  deleteNode(e);
+},false)
+
+listButton.addEventListener('click', todoEntry,false);
