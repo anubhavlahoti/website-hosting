@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="to_do.css">
+</head>
+<body class="todoClass">
+  <div class="container">
+    <button id="showtable" class = "btn btn-danger">Show Table</button>
+    <button id="hidetable" class = "btn btn-danger">Hide Table</button>
+    <div class="comeinform">
+      <label for="todoEntery">Enter Task:</label>
+      <input class="form-control" type="text" id="todoEntry" name="todoEntery">
+      <button class="btn btn-primary" id="todolistbutton">Click Me</button>
+    </div>
+    <table class="table table-hover table-primary" id="taskList">
+      <thead>
+        <tr>
+          <th width ="90%">Task Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="todolist">
+        <tr>
+          <td width="90%">I have to work on some data</td>
+          <td><i class="material-icons style-button">delete_forever</i></td>
+        </tr>
+        <tr>
+          <td id="checkingfade" width="90%">I have to work upon somethinga</td>
+          <td><i class="material-icons style-button">delete_forever</i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container fadingClass">
+  </div>
+  <div class="container fadingClass1">
+  </div>
+  <div class="container fadingClass">
+  </div>
+  <div class="container fadingClass1">
+  </div>
+  <div class="container fadingClass">
+  </div>
+  <div class="container fadingClass1">
+  </div>
+  <div class="container fadingClass">
+  </div>
+  <div class="container fadingClass1">
+  </div>
+  <button id="magicButton" class= "btn btn-primary" style="position:absolute;margin-left:80%;margin-top:10px">Click Me for Magic</button>
+  <script src="to_do.js"></script>
+</body>
+</html>
